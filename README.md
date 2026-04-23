@@ -156,7 +156,7 @@ npm install
 # Edit .env with backend URL
 echo "VITE_API_URL=http://localhost:5000/api" 
 
-###🤝 Contributing
+# 🤝 Contributing
 -Fork the repository
 
 -Create feature branch (git checkout -b feature/AmazingFeature)
@@ -176,10 +176,10 @@ Write meaningful commit messages
 
 Add comments for complex logic
 
-📄 License
+### 📄 License
 This project is licensed under the MIT License - see the LICENSE file for details.
 
-👤 Author
+### 👤 Author
 Fabian Mutune Musau
 
 GitHub: @Fabby24
