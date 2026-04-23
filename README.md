@@ -133,6 +133,7 @@ const getStageOrder = (stage) => {
     };
     return order[stage] || 0;
 };
+```
 
 # Clone the repository
 git clone https://github.com/Fabby24/smartSeason.git

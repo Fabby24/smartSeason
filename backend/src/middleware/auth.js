@@ -1,0 +1,47 @@
+const jwt = require('jsonwebtoken');
+const { pool } = require('../config/database');
+
+const protect = async (req, res, next) => {
+    let token;
+
+    if (req.headers.authorization && req.headers.authorization.startsWith('Bearer')) {
+        try {
+            token = req.headers.authorization.split(' ')[1];
+            const decoded = jwt.verify(token, process.env.JWT_SECRET);
+            
+            const [users] = await pool.execute(
+                'SELECT id, username, email, role, full_name FROM users WHERE id = ?',
+                [decoded.id]
+            );
+            
+            if (users.length === 0) {
+                return res.status(401).json({ message: 'User not found' });
+            }
+            
+            req.user = users[0];
+            next();
+        } catch (error) {
+            return res.status(401).json({ message: 'Not authorized, token failed' });
+        }
+    } else {
+        return res.status(401).json({ message: 'Not authorized, no token' });
+    }
+};
+
+const adminOnly = (req, res, next) => {
+    if (req.user && req.user.role === 'admin') {
+        next();
+    } else {
+        res.status(403).json({ message: 'Admin access required' });
+    }
+};
+
+const agentOnly = (req, res, next) => {
+    if (req.user && req.user.role === 'agent') {
+        next();
+    } else {
+        res.status(403).json({ message: 'Agent access required' });
+    }
+};
+
+module.exports = { protect, adminOnly, agentOnly };
