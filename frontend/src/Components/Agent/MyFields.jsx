@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
-import { useAuth } from '../../context/AuthContext';
-import api from '../../services/api';
+import { useAuth } from '../../Context/AuthContext';
+import api from '../../Services/api';
 import toast from 'react-hot-toast';
 import { MapPin, Calendar, User, AlertCircle, CheckCircle, PlayCircle } from 'lucide-react';
 import { format } from 'date-fns';
