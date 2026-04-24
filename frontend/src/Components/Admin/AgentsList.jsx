@@ -1,10 +1,10 @@
 import React, { useState, useEffect } from 'react';
-import api from '../../services/api';
+import api from '../../Services/api';
 import toast from 'react-hot-toast';
 import { User, Mail, Calendar, UserPlus, Trash2, Shield } from 'lucide-react';
 import Sidebar from '../Layout/Sidebar';
 import Header from '../Layout/Header';
-import { useAuth } from '../../context/AuthContext';
+import { useAuth } from '../../Context/AuthContext';
 
 const AgentsList = () => {
     const { user, logout } = useAuth();
