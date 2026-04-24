@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import api from '../../services/api';
+import api from '../../Services/api';
 import toast from 'react-hot-toast';
 import { X } from 'lucide-react';
 
