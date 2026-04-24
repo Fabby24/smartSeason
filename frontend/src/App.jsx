@@ -1,15 +1,15 @@
 import { BrowserRouter as Router, Routes, Route, Navigate } from 'react-router-dom';
 import { Toaster } from 'react-hot-toast';
-import { AuthProvider, useAuth } from './context/AuthContext';
-import ProtectedRoute from './components/Layout/ProtectedRoute';
-import Login from './components/Auth/Login';
-import Signup from './components/Auth/Signup';
-import AdminDashboard from './components/Dashboard/AdminDashboard';
-import AgentDashboard from './components/Dashboard/AgentDashboard';
-import AgentsList from './components/Admin/AgentsList';
-import Reports from './components/Admin/Reports';
-import MyFields from './components/Agent/MyFields';
-import Schedule from './components/Agent/Schedule';
+import { AuthProvider, useAuth } from './Context/AuthContext';
+import ProtectedRoute from './Components/Layout/ProtectedRoute';
+import Login from './Components/Auth/Login';
+import Signup from './Components/Auth/Signup';
+import AdminDashboard from './Components/Dashboard/AdminDashboard';
+import AgentDashboard from './Components/Dashboard/AgentDashboard';
+import AgentsList from './Components/Admin/AgentsList';
+import Reports from './Components/Admin/Reports';
+import MyFields from './Components/Agent/MyFields';
+import Schedule from './Components/Agent/Schedule';
 
 // Wrapper component that forces re-render on role change
 const AppContent = () => {
