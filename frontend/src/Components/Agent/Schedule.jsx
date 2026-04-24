@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
-import { useAuth } from '../../context/AuthContext';
-import api from '../../services/api';
+import { useAuth } from '../../Context/AuthContext';
+import api from '../../Services/api';
 import { Calendar as CalendarIcon, CheckCircle, Clock, XCircle } from 'lucide-react';
 import { format } from 'date-fns';
 import Sidebar from '../Layout/Sidebar';
