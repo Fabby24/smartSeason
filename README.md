@@ -134,7 +134,7 @@ const calculateStatus = (currentStage, plantingDate, lastUpdateDate) => {
 
     return 'active';
 };
-
+```
 ## 🛠 Tech Stack
 
 ### Frontend
@@ -232,7 +232,7 @@ npm install
 npm run dev
 
 
-``` 
+
 ### 👤 Author
 
 - Fabian Mutune Musau
@@ -243,3 +243,5 @@ Email: musaufabian7@gmail.com
 Live App: https://smartseason.musaufabian7.workers.dev
 API: https://smartseason-production-151b.up.railway.app/api
 Repository: https://github.com/Fabby24/smartSeason
+
+```
