@@ -1,7 +1,7 @@
 import axios from 'axios';
 
 const api = axios.create({
-    baseURL: 'http://localhost:5000/api',
+    baseURL: 'smartseason-production-151b.up.railway.app',
     headers: {
         'Content-Type': 'application/json'
     }
